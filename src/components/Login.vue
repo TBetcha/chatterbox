@@ -8,9 +8,9 @@
       <p>Password</p>
       <input type="password" v-model="password" />
     </form>
-    <button @click="handleLogin()">Login</button>
+    <button class="btn" @click="handleLogin()">Login</button>
     <router-link to="signup">
-      <button>New Here?</button>
+      <button class="btn">New Here?</button>
     </router-link>
   </div>
 </template>
@@ -34,4 +34,13 @@ export default defineComponent({
 })
 </script>
 
-<style scoped></style>
+<style scoped>
+.btn {
+  font-weight: bold;
+  color: #da5e6f;
+  cursor: pointer;
+}
+.btn:active {
+  background-color: white;
+}
+</style>

@@ -21,3 +21,10 @@ export default defineComponent({
   },
 })
 </script>
+
+<style scoped>
+.btn {
+  font-weight: bold;
+  color: #da5e6f;
+}
+</style>
