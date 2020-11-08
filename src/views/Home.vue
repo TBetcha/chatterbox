@@ -1,18 +1,23 @@
+<!-- @format -->
+
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+    <Splash msg="Welcome to ChatterBox" />
+    <img alt="Vue logo" src="../assets/chatbub.png" />
+    <Login />
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
-import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
+import { defineComponent } from 'vue'
+import Splash from '@/components/Splash.vue' // @ is an alias to /src
+import Login from '@/components/Login.vue'
 
 export default defineComponent({
-  name: "Home",
+  name: 'Home',
   components: {
-    HelloWorld
-  }
-});
+    Splash,
+    Login,
+  },
+})
 </script>
