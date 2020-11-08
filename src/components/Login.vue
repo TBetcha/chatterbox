@@ -9,15 +9,19 @@
       <input type="password" v-model="password" />
     </form>
     <button @click="handleLogin()">Login</button>
+    <router-link to="signup">
+      <button>New Here?</button>
+    </router-link>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
+import VueRouter from 'vue-router'
 
 export default defineComponent({
   name: 'Login',
-  setup() {
+  setup(context) {
     const user = ''
     const password = ''
     const handleLogin = (user: string, password: string) => {
