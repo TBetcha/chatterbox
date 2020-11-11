@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "commonjs",
+    "outDir": "package",
+    "sourceMap": false
+  },
+  "exclude": ["src/app"]
+}
