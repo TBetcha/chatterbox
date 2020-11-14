@@ -9,6 +9,7 @@ export default class Server {
   private readonly host: string
   private readonly port: number
   private readonly server: http.Server
+  private readonly websocket: Websock
 
   constructor() {
     this.app = express()
