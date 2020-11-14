@@ -3,19 +3,23 @@ import express from 'express'
 import http from 'http'
 import path from 'path'
 import consola from 'consola'
+import Websocket from './websocket'
 
 export default class Server {
   private readonly app: express.Application
   private readonly host: string
   private readonly port: number
   private readonly server: http.Server
-  private readonly websocket: Websock
+  //TODO:
+  //import when done
+  private readonly websocket: Websocket
 
   constructor() {
     this.app = express()
     this.host = '127.0.0.1'
     this.port = 3000
     this.server = http.createServer(this.app)
+    this.websocket = new Websocket(this.server)
   }
   public start(): void {
     this.app.use(express.static(path.resolve('dist')))
