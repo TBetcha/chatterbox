@@ -8,6 +8,21 @@
   <router-view />
 </template>
 
+<script lang="ts">
+import Vue from 'vue'
+import { defineComponent } from 'vue'
+export default defineComponent({
+  name: 'App',
+  setup() {
+    function callSocket() {
+      console.log('ok here')
+    }
+
+    return callSocket
+  },
+})
+</script>
+
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

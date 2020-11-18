@@ -32,6 +32,7 @@ export default class websocket {
   private static connection(socket: socketIO.Socket) {
     socket.on('test', (data: any) => {
       //womp;
+      console.log('did it', data)
     })
     socket.emit('connection')
   }
